@@ -19,3 +19,28 @@ def fibonacci_iterative(n):
 # Test
 n = 10
 print("Iterative Fibonacci of", n, ":", fibonacci_iterative(n))
+
+#fibonacci series
+
+# Recursive Fibonacci
+def fib_recursive(n):
+    if n <= 1:
+        return n
+    else:
+        return fib_recursive(n-1) + fib_recursive(n-2)
+
+# Iterative Fibonacci
+def fib_iterative(n):
+    a, b = 0, 1
+    for i in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+n = int(input("Enter number of terms: "))
+
+print("Recursive Fibonacci:")
+for i in range(n):
+    print(fib_recursive(i), end=" ")
+
+print("\nIterative Fibonacci:")
+fib_iterative(n)
